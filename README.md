@@ -1,4 +1,4 @@
-## Hi there 👋
+![Hi](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExamloa2pyZWFtbGVuNDBvY21tYnJ4ZWoxcnk4cWw3NmczMWx0enQ3NSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MEFVcuRIoVETUMYZEe/giphy.gif)
 
 <!--
 **abidfakhri/abidfakhri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
