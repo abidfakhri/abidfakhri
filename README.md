@@ -1,4 +1,4 @@
-![abidfakhri](img/header.png)
+![abidfakhri](img/h.png)
 
 <!--
 **abidfakhri/abidfakhri** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
