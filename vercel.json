@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://abidfakhri-api.vercel.app/api/:path*" },
+    { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
+    {"source": "/robots.txt", "destination": "/robots.txt"},
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
+}
