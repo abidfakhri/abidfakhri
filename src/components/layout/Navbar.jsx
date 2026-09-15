@@ -4,9 +4,9 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 const LINKS = [
-  { to: '/', label: 'Beranda' },
+  { to: '/', label: 'Profil' },
   { to: '/projects', label: 'Proyek' },
-  { to: '/skills', label: 'Skill' },
+  { to: '/skills', label: 'Skills' },
   { to: '/services', label: 'Layanan' },
 ];
 
