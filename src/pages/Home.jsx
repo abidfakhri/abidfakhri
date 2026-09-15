@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ArrowRight, Github, Linkedin, Mail, MapPin, RotateCw, Sparkles } from 'lucide-react';
-import { dashboardApi } from '../api/dashboard.api.js';
+import { profileApi } from '../api/profile.api.js';
 import { GlassCard } from '../components/ui/GlassCard.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Badge } from '../components/ui/Badge.jsx';
@@ -22,7 +22,7 @@ export default function Home() {
   const [flipped, setFlipped] = useState(false);
 
   useEffect(() => {
-    dashboardApi.home().then(setData).catch(() => {});
+    profileApi.home().then(setData).catch(() => {});
   }, []);
 
   if (!data) return <PageSpinner />;
