@@ -7,6 +7,7 @@ import { GlassCard } from '../components/ui/GlassCard.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { Badge } from '../components/ui/Badge.jsx';
 import { PageSpinner } from '../components/ui/Spinner.jsx';
+import { usePageMeta } from '../lib/usePageMeta.js';
 
 const STATUS_TONE = { selesai: 'success', proses: 'warning', konsep: 'neutral' };
 
@@ -20,6 +21,12 @@ const revealUp = {
 export default function Home() {
   const [data, setData] = useState(null);
   const [flipped, setFlipped] = useState(false);
+
+  usePageMeta({
+    title: "Muhamad 'Abid Fakhri Nabiil - Full Stack Web & Android Developer",
+    description: "Portofolio Muhamad 'Abid Fakhri Nabiil, Full Stack Web & Android Developer. Membangun aplikasi web dan mobile.",
+    path: '/',
+  });
 
   useEffect(() => {
     profileApi.home().then(setData).catch(() => {});

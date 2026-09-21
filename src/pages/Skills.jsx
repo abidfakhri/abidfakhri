@@ -5,9 +5,16 @@ import { skillsApi } from '../api/skills.api.js';
 import { GlassCard } from '../components/ui/GlassCard.jsx';
 import { EmptyState } from '../components/ui/EmptyState.jsx';
 import { PageSpinner } from '../components/ui/Spinner.jsx';
+import { usePageMeta } from '../lib/usePageMeta.js';
 
 export default function Skills() {
   const [skills, setSkills] = useState(null);
+
+  usePageMeta({
+    title: "Keahlian — Muhamad 'Abid Fakhri Nabiil",
+    description: 'Teknologi dan tools yang dikuasai Muhamad \'Abid Fakhri Nabiil, Full Stack Web & Android Developer.',
+    path: '/skills',
+  });
 
   useEffect(() => {
     skillsApi.list().then(setSkills).catch(() => setSkills([]));

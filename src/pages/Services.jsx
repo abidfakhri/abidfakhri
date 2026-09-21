@@ -5,9 +5,16 @@ import { servicesApi } from '../api/services.api.js';
 import { GlassCard } from '../components/ui/GlassCard.jsx';
 import { EmptyState } from '../components/ui/EmptyState.jsx';
 import { PageSpinner } from '../components/ui/Spinner.jsx';
+import { usePageMeta } from '../lib/usePageMeta.js';
 
 export default function Services() {
   const [services, setServices] = useState(null);
+
+  usePageMeta({
+    title: "Layanan — Muhamad 'Abid Fakhri Nabiil",
+    description: 'Jasa pengembangan web dan mobile yang bisa dipesan dari Muhamad \'Abid Fakhri Nabiil.',
+    path: '/services',
+  });
 
   useEffect(() => {
     servicesApi.list().then(setServices).catch(() => setServices([]));

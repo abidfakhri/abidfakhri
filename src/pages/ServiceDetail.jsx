@@ -7,12 +7,21 @@ import { GlassCard } from '../components/ui/GlassCard.jsx';
 import { Button } from '../components/ui/Button.jsx';
 import { PageSpinner } from '../components/ui/Spinner.jsx';
 import { EmptyState } from '../components/ui/EmptyState.jsx';
+import { usePageMeta } from '../lib/usePageMeta.js';
 
 export default function ServiceDetail() {
   const { id } = useParams();
   const [service, setService] = useState(null);
   const [email, setEmail] = useState('');
   const [notFound, setNotFound] = useState(false);
+
+  usePageMeta({
+    title: service
+      ? `${service.nama} — Muhamad 'Abid Fakhri Nabiil`
+      : "Layanan — Muhamad 'Abid Fakhri Nabiil",
+    description: service?.deskripsi || undefined,
+    path: `/services/${id}`,
+  });
 
   useEffect(() => {
     servicesApi

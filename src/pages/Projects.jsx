@@ -5,6 +5,7 @@ import { GlassCard } from '../components/ui/GlassCard.jsx';
 import { Badge } from '../components/ui/Badge.jsx';
 import { EmptyState } from '../components/ui/EmptyState.jsx';
 import { PageSpinner } from '../components/ui/Spinner.jsx';
+import { usePageMeta } from '../lib/usePageMeta.js';
 
 const STATUSES = ['selesai', 'proses', 'konsep'];
 const STATUS_TONE = { selesai: 'success', proses: 'warning', konsep: 'neutral' };
@@ -12,6 +13,12 @@ const STATUS_TONE = { selesai: 'success', proses: 'warning', konsep: 'neutral' }
 export default function Projects() {
   const [projects, setProjects] = useState(null);
   const [filter, setFilter] = useState('');
+
+  usePageMeta({
+    title: "Proyek — Muhamad 'Abid Fakhri Nabiil",
+    description: 'Kumpulan proyek web dan mobile yang pernah dan sedang dikerjakan Muhamad \'Abid Fakhri Nabiil.',
+    path: '/projects',
+  });
 
   const load = (status) => {
     setProjects(null);
